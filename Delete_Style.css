@@ -1,0 +1,53 @@
+h1
+{
+    font-family: fantasy;
+    padding: 10px 10px;
+    background-color: rgb(241, 121, 8);
+    
+}
+body
+{
+    background-color:gold;
+}
+#view-table
+{
+    font-size: larger;
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    color: black;
+    border:1px solid black;
+}
+th
+{
+    padding: 5px;
+    color: black;
+    background-color: gold;
+}
+tr
+{
+    color: black;
+    background-color: rgb(241, 121, 8);
+}
+td
+{
+    padding: 5px;
+    font-weight: bold;
+
+}
+
+#del-btn{
+    font-size: large;
+    background-color:red;
+    outline: none;
+    border-color: black;
+    border-width: 3px;
+    padding:5px 5px 5px 5px;   
+}
+#del-btn:hover{
+    color: white;
+}
+input #cbox{
+    background-color: gold;
+    
+}

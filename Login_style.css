@@ -1,0 +1,61 @@
+h1
+{
+    font-family: fantasy;
+    padding: 10px 10px;
+    background-color: rgb(241, 121, 8);
+    
+}
+
+body
+{
+    background-color: gold;
+}
+
+input{
+    margin: 5px;
+    background-color: gold;
+    font-size: larger;
+    color: black;
+    border-width: 3px;
+    border-color: black;
+    outline: none;
+}
+
+#div1
+{
+    font-size: x-large;
+    margin: auto;
+    margin-top: 5%;
+    padding: 10px 10px;
+    padding-top:20px;
+    padding-bottom: -20px;
+    background-color: rgb(241, 121, 8);
+    width: fit-content;
+}
+
+#sub-btn
+{
+    border-color: black;
+    border-width: 3px;
+    background-color: rgb(214, 44, 2);
+    color:white;
+    margin: 20px;
+    margin-left:50px;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 30%;
+    width: auto;
+    outline: none;
+}
+
+#sub-btn:hover{
+    box-shadow: 3px 3px 3px black;
+}
+
+
+a
+{
+    color: white;
+    position:relative;
+    left:10%;
+}

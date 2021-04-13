@@ -1,0 +1,29 @@
+
+h1 {
+    font-family: fantasy;
+    padding: 10px 10px;
+    background-color: rgb(241, 121, 8);
+}
+body {
+    background-color: gold;
+}
+h2 {
+    text-align: center;
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#link-div {
+    background-color: rgb(241, 121, 8);
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+#link-div a {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: yellow;
+    text-decoration: none;
+}
+#link-div a:hover {
+    font-weight: bolder;
+    color: white;
+}
