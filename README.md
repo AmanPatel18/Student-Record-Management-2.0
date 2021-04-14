@@ -3,7 +3,7 @@ Student Record Management is an advanced version of SRM 1.0  GUI web based appli
 regarding the student record management. It is used for storing the records of the student in any institution especially for the coaching centers that teaches programming.
 Here you can manage the record of the students in a very easy way, as it provides very friendly and easy user interface.
 
-How to use?
+# How to use?
 In order to use this web-application you need an application server as well as database server, as some of the files of the app are coded in php with mysql,
 so just download a software which provides a local application server, database server like WAMP-Server.
 
