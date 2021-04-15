@@ -17,6 +17,7 @@ mysqli_close($con);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Status</title>
     <link type="text/css" href="navigation_style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="operation_status.css">
 
 </head>
 
@@ -40,6 +41,9 @@ mysqli_close($con);
         echo "<h2>Account can't be created!</h2>";
     }
     ?>
+  <div id="link-div">
+        <a href="Login.php">Back to login?</a>
+    </div>
 </body>
 
 </html>

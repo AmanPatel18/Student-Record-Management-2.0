@@ -19,6 +19,23 @@ for ($i = 1; $i <= $records; $i++) {
 }
 $con = mysqli_connect('localhost', 'root', '', 'SRM', '3308');
 mysqli_select_db($con, 'SRM');
+/*
+$data="select * from student";
+$result=mysqli_query($con,$data);
+$num=mysqli_num_rows($result);
+
+for ($i=1; $i<=$num; $i+1) { 
+    $row=mysqli_fetch_array($result);
+    if($row['Roll_number']=='$rno[$i]')
+    {
+        if ((($amount[$i] == 1000) && ($subject[$i] == "C")) || (($amount[$i] == 1500) && ($subject[$i] == "C++")) || (($amount[$i] == 2000) && ($subject[$i] == "Java")) || (($amount[$i] == 2500) && ($subject[$i] == "PHP")) || (($amount[$i] == 3000) && ($subject[$i] == "Python"))) {
+            $fs = "Paid";
+        } else {
+            $fs = "Due"; #fee status
+        }
+        $pa = $row['Total_Fees'] - $amount[$i]; #pending amount
+    }
+}*/
 for ($i = 1; $i <= $records; $i++) {
     $q = "update student set Name='$name[$i]',Batch='$batch[$i]',Subject='$subject[$i]',Age=$age[$i],Gender='$gender[$i]',Amount_Paid=$amount[$i] where Roll_number=$rno[$i]";
     $status = mysqli_query($con, $q);
@@ -56,7 +73,7 @@ mysqli_close($con);
     }
     ?>
     <div id="link-div">
-        <a href="View.php">Update More Records?</a>
+        <a href="Update.php">Update More Records?</a>
         <br>
         <a href="View.php">View Records</a>
     </div>
