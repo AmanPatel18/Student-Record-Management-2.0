@@ -51,7 +51,7 @@ mysqli_close($con);
     }
     ?>
     <div id="link-div">
-        <a href="View.php">Delete More Records?</a>
+        <a href="Delete.php">Delete More Records?</a>
         <br>
         <a href="View.php">View Records</a>
     </div>
