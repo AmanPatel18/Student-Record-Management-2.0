@@ -84,3 +84,13 @@ h1
     color:rgb(214, 44, 2);
     cursor: pointer;
 }
+#logout{
+    width: 5%;
+    height: 5%;
+    float: right;
+    margin-right: 5%;
+}
+#logout:hover{
+    width: 6%;
+    height: 6%;
+}

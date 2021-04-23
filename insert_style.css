@@ -55,3 +55,6 @@ option{
     border-width: 3px;
     
 }
+#sub-btn:hover{
+    color: black;
+}

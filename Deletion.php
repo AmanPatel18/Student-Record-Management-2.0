@@ -11,7 +11,7 @@ for ($i = 1; $i <= $size; $i++, $j++) {
         $i--;
     }
 }
-$con = mysqli_connect('localhost', 'root', '', 'SRM', '3308');
+$con = mysqli_connect('localhost', 'root', '', 'SRM', '3306');
 mysqli_select_db($con, 'SRM');
 for ($k = 1; $k <= $size; $k++) {
     $q = "delete from student where Roll_number=" . $rno[$k];

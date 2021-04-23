@@ -19,7 +19,7 @@
                 </tr>
                 <tr>
                     <th>Password</th>
-                    <td><input type="text" placeholder="Enter Password" name="password" required /></td>
+                    <td><input type="password" placeholder="Enter Password" name="password" required /></td>
                 </tr>
                 <tr>
                     <td><a href="Login.php">Already have an account?</a></td>

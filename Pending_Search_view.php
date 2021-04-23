@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
     header("location:http://localhost/SRM/Login.php");
 }
 $search = $_POST['search'];
-$con = mysqli_connect('localhost', 'root', '', 'SRM', '3308');
+$con = mysqli_connect('localhost', 'root', '', 'SRM', '3306');
 mysqli_select_db($con, 'SRM');
 $q = "select * from student where Roll_Number=$search and Fee_Status='Due'";
 $result = mysqli_query($con, $q);

@@ -3,9 +3,10 @@ session_start();
 if (!isset($_SESSION['username'])) {
     header('location:http://localhost/SRM/Login.php');
 }
+$search = $_POST['search'];
 $con = mysqli_connect('localhost', 'root', '', 'SRM', '3306');
 mysqli_select_db($con, 'SRM');
-$q = "select * from student order by Roll_number";
+$q = "select * from student where Roll_number=$search";
 $result = mysqli_query($con, $q);
 $num = mysqli_num_rows($result);
 mysqli_close($con);
@@ -19,6 +20,7 @@ mysqli_close($con);
     <title>View Records</title>
     <link rel="stylesheet" type="text/css" href="View_Style.css" />
     <link rel="stylesheet" href="navigation_style.css">
+    <link rel="stylesheet" href="operation_status.css">
 </head>
 
 <body>
@@ -33,12 +35,9 @@ mysqli_close($con);
         <a href="Pending_Fees.php">Pending Fees</a>
 
     </div>
-    <div id="search-div">
-        <form action="Search_Update.php" method="POST">
-            <input id="search_bar" type="search" placeholder="Enter the Roll Number" name="search" />
-            <input id="search_btn" type="submit" value="Search" />
-        </form>
-    </div>
+    <?php
+    if ($num ==1){
+    ?>
     <form action="Updation.php" method="POST">
         <table id="view-table">
             <br />
@@ -74,14 +73,20 @@ mysqli_close($con);
                 <td><input type="number" value="<?php echo $row['Amount_Paid']; ?>" name="amount<?php echo $i; ?>" /></td>
             </tr>
         <?php
-                }
-        ?>
-        </tr>
-        <tr>
-            <td colspan="8"><input id="update-btn" type="submit" value="Update" />
+            }
+        }
+            else
+            {
+                echo "<h2>Roll number doesn't exist</h2>";
+                ?>
+                <div id="link-div">
+                <a href="Update.php">Search Again?</a>
+                </div>
+                <?php
+            }
+            ?>
         </tr>
         </table>
     </form>
 </body>
-
 </html>

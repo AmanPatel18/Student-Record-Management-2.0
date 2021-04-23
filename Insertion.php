@@ -24,7 +24,7 @@ if ((($amount == 1000) && ($subject == "C")) || (($amount == 1500) && ($subject 
 }
 $pa = $tf - $amount;
 
-$con = mysqli_connect('localhost', 'root', '', 'SRM', '3308');
+$con = mysqli_connect('localhost', 'root', '', 'SRM', '3306');
 mysqli_select_db($con, 'SRM');
 $q = "insert into student values($rno,'$name','$batch','$subject',$age,'$gender',$tf,$amount,$pa,'$fs')";
 $status = mysqli_query($con, $q);

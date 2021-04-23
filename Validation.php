@@ -2,7 +2,7 @@
 session_start();
 $username=$_POST['username'];
 $password=$_POST['password'];
-$con=mysqli_connect('localhost','root','','SRM','3308');
+$con=mysqli_connect('localhost','root','','SRM','3306');
 mysqli_select_db($con,'SRM');
 $q="select * from user where Username='$username'";
 $result=mysqli_query($con,$q);

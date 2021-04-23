@@ -17,6 +17,8 @@ if (!isset($_SESSION['username'])) {
 <body>
     <h1>Student Record Management</h1>
     <h3><?php echo "Welcome " . $_SESSION['username']; ?></h3>
+    <a href="Logout.php" title="Logout"><img id="logout" src="Logout.png" /></a>
+
     <div class="log-box">
         <h1>Main Menu</h1>
         <a href="Insert.php" id="i1" class="mcontent"> 1.Insert Records</a>
@@ -24,6 +26,8 @@ if (!isset($_SESSION['username'])) {
         <br /><a href="Update.php" id="i3" class="mcontent"> 3.Udate Records</a>
         <br /><a href="View.php" id="i4" class="mcontent">4.View Records</a>
         <br /><a href="Pending_Fees.php" id="i5" class="mcontent">5.Pending Fees</a>
+
     </div>
 </body>
+
 </html>

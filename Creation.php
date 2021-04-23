@@ -1,7 +1,7 @@
 <?php
 $username = $_POST['username'];
 $password = $_POST['password'];
-$con = mysqli_connect('localhost', 'root', '', 'SRM', '3308');
+$con = mysqli_connect('localhost', 'root', '', 'SRM', '3306');
 mysqli_select_db($con, 'SRM');
 $hash = password_hash($password, PASSWORD_DEFAULT);
 $q = "insert into user values('$username','$hash')";

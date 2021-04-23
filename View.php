@@ -1,10 +1,12 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header('location:http://localhost/BRM/Login_Page.php');
+    header('location:http://localhost/SRM/Login.php');
 }
-$con = mysqli_connect('localhost', 'root', '', 'SRM', '3308');
+
+$con = mysqli_connect('localhost', 'root', '', 'SRM', '3306');
 mysqli_select_db($con, 'SRM');
+
 $q = "select * from student order by Roll_number";
 $result = mysqli_query($con, $q);
 $num = mysqli_num_rows($result);
@@ -78,5 +80,4 @@ mysqli_close($con);
     </tr>
     </table>
 </body>
-
 </html>
