@@ -24,12 +24,17 @@ In this web application you can perform following operations:-
 # How to use?
 
 In order to use this web-application you need to have an application server as well as the database server, as some of the files of the app are coded in php with mysql,
-so just download a software which provides a local application server, database server like WAMP-Server or Xamp-Server. (Here we are using WAMP-Server).
+so just download a software which provides a local application server, database server like WAMP-Server or Xamp-Server.
 
-After installing the WAMP-Server in your system, go to the directory where WAMP is installed (usually in C drive) and head over to "C:\wamp64\www" and create a folder and name it anything you want for instance "SRM" and copy all the files that i have provided in my repository and paste in this folder that you just created.
+# Using WAMP-Server:-
+After installing the WAMP-Server in your system, go to the directory where WAMP is installed (usually in C drive) and head over to "C:\wamp64\www\" and create a folder and name it anything you want for instance "SRM" and copy all the files that i have provided in my repository and paste in this folder that you just created.
 
-** Then open php-myadmin, go to databases and create a new database namely 'srm'. Now click on import and select the database file namely, 'srm.sql' that i have provided in my repository. And click on 'Go Button' to execute the query.
-Now your database will have two tables 'username' and 'student'. **
+# Using XAMP-Server:-
+After installing the XAMP-Server in your system, go to the directory where XAMP is installed (usually in C drive) and head over to "C:\xamp\htdocs\" and create a folder and name it anything you want for instance "SRM" and copy all the files that i have provided in my repository and paste in this folder that you just created.
+
+
+** Then open any browser and type localhost/phpmyadmin in the address bar, login and go to databases and create a new database namely 'srm'. Now click on import and select the database file namely, 'srm.sql' that i have provided in my repository. And click on 'Go' button to execute the query.
+Now your database will have two tables 'student' and 'user'. **
 
 Now, turn on the server in your system, and open any webbrowser and type "localhost/SRM/Login.php" just login or create an account and you are good to go.
 
