@@ -36,57 +36,59 @@ mysqli_close($con);
 
     </div>
     <?php
-    if ($num ==1){
+    if ($num == 1) {
     ?>
-    <form action="Updation.php" method="POST">
-        <table id="view-table">
-            <br />
-            <br />
-            <tr>
-                <th>Roll Number</th>
-                <th>Name</th>
-                <th>Batch</th>
-                <th>Subject</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Amount Paid</th>
-            </tr>
-            <tr>
-                <?php
-                for ($i = 1; $i <= $num; $i++) {
-                    $row = mysqli_fetch_array($result);
-                ?>
-            <tr>
-                <td><input type="number" value="<?php echo $row['Roll_number']; ?>" name="rno<?php echo $i; ?>" /></td>
-                <td><input type="text" value="<?php echo $row['Name']; ?>" name="name<?php echo $i; ?>" /></td>
-                <td><input type="text" value="<?php echo $row['Batch']; ?>" name="batch<?php echo $i; ?>" /></td>
-                <td><select name="subject<?php echo $i ?>">
-                        <option><?php echo $row['Subject']; ?></option>
-                        <option value="C">C</option>
-                        <option value="C++">C++</option>
-                        <option value="Java">Java</option>
-                        <option value="Python">Python</option>
-                        <option value="PHP">PHP</option>
-                    </select></td>
-                <td><input type="number" value="<?php echo $row['Age']; ?>" name="age<?php echo $i; ?>" /></td>
-                <td><input type="text" value="<?php echo $row['Gender']; ?>" name="gender<?php echo $i; ?>" /></td>
-                <td><input type="number" value="<?php echo $row['Amount_Paid']; ?>" name="amount<?php echo $i; ?>" /></td>
-            </tr>
-        <?php
-            }
-        }
-            else
-            {
-                echo "<h2>Roll number doesn't exist</h2>";
-                ?>
-                <div id="link-div">
-                <a href="Update.php">Search Again?</a>
-                </div>
-                <?php
-            }
+        <form action="Updation.php" method="POST">
+            <table id="view-table">
+                <br />
+                <br />
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Batch</th>
+                    <th>Subject</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Amount Paid</th>
+                </tr>
+                <tr>
+                    <?php
+                    for ($i = 1; $i <= $num; $i++) {
+                        $row = mysqli_fetch_array($result);
+                    ?>
+                <tr>
+                    <td><input type="number" value="<?php echo $row['Roll_number']; ?>" name="rno<?php echo $i; ?>" /></td>
+                    <td><input type="text" value="<?php echo $row['Name']; ?>" name="name<?php echo $i; ?>" /></td>
+                    <td><input type="text" value="<?php echo $row['Batch']; ?>" name="batch<?php echo $i; ?>" /></td>
+                    <td><select name="subject<?php echo $i ?>">
+                            <option><?php echo $row['Subject']; ?></option>
+                            <option value="C">C</option>
+                            <option value="C++">C++</option>
+                            <option value="Java">Java</option>
+                            <option value="Python">Python</option>
+                            <option value="PHP">PHP</option>
+                        </select></td>
+                    <td><input type="number" value="<?php echo $row['Age']; ?>" name="age<?php echo $i; ?>" /></td>
+                    <td><input type="text" value="<?php echo $row['Gender']; ?>" name="gender<?php echo $i; ?>" /></td>
+                    <td><input type="number" value="<?php echo $row['Amount_Paid']; ?>" name="amount<?php echo $i; ?>" /></td>
+                </tr>
+                <tr>
+                    <td colspan="8"><input id="update-btn" type="submit" value="Update" />
+                </tr>
+            <?php
+                    }
+                } else {
+                    echo "<h2>Roll number doesn't exist</h2>";
             ?>
+            <div id="link-div">
+                <a href="Update.php">Search Again?</a>
+            </div>
+        <?php
+                }
+        ?>
         </tr>
-        </table>
-    </form>
+            </table>
+        </form>
 </body>
+
 </html>
